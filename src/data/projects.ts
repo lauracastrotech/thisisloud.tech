@@ -1,0 +1,48 @@
+import type { Project } from "@/types";
+
+export const projects: Project[] = [
+  {
+    id: "logger",
+    name: "Logger",
+    description: "TODO: Brief description of what Logger does.",
+    role: "TODO: What you specifically built or owned on this project.",
+    aiUsage: "TODO: How AI was used during development.",
+    techStack: ["TODO"],
+    githubUrl: "https://github.com/lauracastrotech/TODO",
+    mediaType: "image",
+    mediaSrc: undefined,
+  },
+  {
+    id: "food-pulse",
+    name: "Food Pulse",
+    description: "TODO: Brief description of what Food Pulse does.",
+    role: "TODO: PM role, frontend development, specific features owned.",
+    aiUsage: "TODO: How AI was used during development.",
+    techStack: ["React", "TODO"],
+    githubUrl: "https://github.com/lauracastrotech/TODO",
+    mediaType: "image",
+    mediaSrc: undefined,
+  },
+  {
+    id: "disability-calculator",
+    name: "Disability Calculator",
+    description: "TODO: Brief description of what the Disability Calculator does.",
+    role: "TODO: First capstone — what you built and owned.",
+    aiUsage: "TODO: How AI was used during development.",
+    techStack: ["TODO"],
+    githubUrl: "https://github.com/lauracastrotech/TODO",
+    mediaType: "video",
+    mediaSrc: undefined,
+  },
+  {
+    id: "how-to-life",
+    name: "How to Life",
+    description: "TODO: Brief description of what How to Life does.",
+    role: "TODO: What you specifically built or owned on this project.",
+    aiUsage: "TODO: How AI was used during development.",
+    techStack: ["TODO"],
+    githubUrl: "https://github.com/lauracastrotech/TODO",
+    mediaType: "image",
+    mediaSrc: undefined,
+  },
+];

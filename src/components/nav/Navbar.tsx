@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import { useScrolled } from "@/hooks/useScrolled";
 import { navLinks } from "@/data/navigation";
 import type { NavLink } from "@/types";
@@ -8,14 +10,19 @@ import type { NavLink } from "@/types";
 interface NavLinkItemProps {
   link: NavLink;
   onClick?: () => void;
+  scrolled?: boolean;
 }
 
-function NavLinkItem({ link, onClick }: NavLinkItemProps) {
+function NavLinkItem({ link, onClick, scrolled }: NavLinkItemProps) {
   return (
     <a
       href={link.href}
       onClick={onClick}
-      className="block font-body text-cream/70 hover:text-cream text-sm tracking-wide py-2 transition-colors"
+      className={`block font-body text-base tracking-wide py-2 transition-colors ${
+        scrolled
+          ? "text-forest/80 hover:text-forest"
+          : "text-navy/80 hover:text-navy"
+      }`}
     >
       {link.label}
     </a>
@@ -29,7 +36,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-charcoal/95 backdrop-blur-sm shadow-md" : "bg-transparent"
+        scrolled ? "bg-cream shadow-md" : "bg-cream"
       }`}
     >
       <a
@@ -43,39 +50,47 @@ export default function Navbar() {
         aria-label="Main navigation"
         className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between"
       >
-        <a
-          href="#"
+        <Link
+          href="/"
           aria-label="Loud Tech — back to top"
-          className="flex items-center gap-3 group"
+          className="flex items-center gap-3 group shrink-0"
         >
-          <div className="h-9 w-9 rounded-full bg-forest flex items-center justify-center shrink-0">
-            <span className="font-display text-cream text-sm tracking-widest">LT</span>
-          </div>
-          <span className="font-display text-cream text-lg tracking-wide group-hover:text-cream/80 transition-colors">
-            Loud Tech
-          </span>
-        </a>
+          {/* TODO: swap to green icon when scrolled — replace src with green asset when ready */}
+          <Image
+            src="/logo/Navy%20Icon.png"
+            alt=""
+            width={36}
+            height={36}
+            className="h-9 w-9 object-contain"
+          />
+          {/* TODO: swap to green wordmark when scrolled — replace src with green asset when ready */}
+          <Image
+            src="/logo/Navy%20Wordmark%20Stacked.png"
+            alt="Loud Tech"
+            width={80}
+            height={40}
+            className="h-10 w-auto object-contain group-hover:opacity-75 transition-opacity"
+          />
+        </Link>
 
-        {/* Desktop links — before scroll only */}
-        {!scrolled && (
-          <ul className="hidden md:flex items-center gap-8" role="list">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <NavLinkItem link={link} />
-              </li>
-            ))}
-          </ul>
-        )}
+        {/* Nav links — desktop and tablet */}
+        <ul className="hidden md:flex items-center gap-8" role="list">
+          {navLinks.map((link) => (
+            <li key={link.href}>
+              <NavLinkItem link={link} scrolled={scrolled} />
+            </li>
+          ))}
+        </ul>
 
-        {/* Hamburger — mobile always, desktop after scroll */}
+        {/* Hamburger — mobile only */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
-          className={`${
-            scrolled ? "flex" : "flex md:hidden"
-          } items-center justify-center p-2 text-cream hover:text-cream/80 transition-colors`}
+          className={`flex md:hidden items-center justify-center p-2 transition-colors ${
+            scrolled ? "text-forest hover:text-forest/70" : "text-navy hover:text-navy/70"
+          }`}
         >
           {menuOpen ? (
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -92,12 +107,12 @@ export default function Navbar() {
       {menuOpen && (
         <div
           id="mobile-menu"
-          className="bg-charcoal/95 backdrop-blur-sm border-t border-cream/10"
+          className="bg-cream border-t border-forest/10"
         >
           <ul className="mx-auto max-w-5xl px-6 py-4 flex flex-col gap-1" role="list">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <NavLinkItem link={link} onClick={() => setMenuOpen(false)} />
+                <NavLinkItem link={link} scrolled={scrolled} onClick={() => setMenuOpen(false)} />
               </li>
             ))}
           </ul>
