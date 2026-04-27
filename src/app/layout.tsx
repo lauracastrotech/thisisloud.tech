@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Dangrek, AR_One_Sans } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/nav/Navbar";
 
 const dangrek = Dangrek({
   variable: "--font-display",
@@ -28,7 +29,10 @@ export default function RootLayout({
       lang="en"
       className={`${dangrek.variable} ${arOneSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+          <Navbar />
+          {children}
+        </body>
     </html>
   );
 }
