@@ -13,7 +13,7 @@ export default function ContactSection() {
       <div className="absolute inset-0 bg-charcoal/85" aria-hidden="true" />
 
       <div className="relative z-10 mx-auto max-w-5xl px-6">
-        <div className="mb-16">
+        <div className="mb-8 text-center md:text-left">
           <p className="font-body text-cream/50 text-xs tracking-widest uppercase mb-3">
             Get In Touch
           </p>
@@ -22,17 +22,18 @@ export default function ContactSection() {
           </h2>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-start">
+        <div className="flex flex-col md:flex-row gap-12 md:gap-8 items-center md:items-start">
 
           {/* Photo + social */}
           <div className="flex flex-col items-center gap-6 shrink-0">
-            <div className="relative w-56 md:w-72 aspect-[3/4] rounded-2xl overflow-hidden border-4 border-cream/20">
+            {/* Circle on mobile, portrait rectangle on desktop */}
+            <div className="relative w-48 h-48 rounded-full md:rounded-2xl md:w-72 md:h-auto md:aspect-[3/4] overflow-hidden border-4 border-cream/20">
               <Image
-                src="/headshot/standing.JPG"
+                src="/headshot/hand_on_hip.JPG"
                 alt="Laura Castro"
                 fill
-                sizes="(max-width: 768px) 224px, 288px"
-                className="object-contain object-bottom"
+                sizes="(max-width: 768px) 192px, 288px"
+                className="object-cover object-top md:object-contain md:object-bottom [filter:saturate(80%)_hue-rotate(-15deg)]"
               />
             </div>
 
@@ -48,13 +49,13 @@ export default function ContactSection() {
 
           {/* Contact form */}
           <form
-            className="flex-1 flex flex-col gap-6"
+            className="flex-1 w-full flex flex-col gap-6"
             aria-label="Contact form"
           >
             <div className="flex flex-col gap-2">
               <label
                 htmlFor="name"
-                className="font-body text-cream/50 text-xs tracking-widest uppercase"
+                className="font-body text-cream/70 text-xs tracking-widest uppercase font-semibold"
               >
                 Name
               </label>
@@ -64,7 +65,7 @@ export default function ContactSection() {
                 type="text"
                 autoComplete="name"
                 required
-                className="font-body text-cream bg-cream/10 border border-cream/20 rounded-lg px-4 py-3 text-base placeholder:text-cream/30 focus:outline-none focus:ring-2 focus:ring-cream/40 transition"
+                className="font-body font-medium text-cream bg-cream/15 border border-cream/40 rounded-lg px-4 py-3 text-base placeholder:text-cream/50 focus:outline-none focus:ring-2 focus:ring-cream/60 transition w-full"
                 placeholder="Your name"
               />
             </div>
@@ -72,7 +73,7 @@ export default function ContactSection() {
             <div className="flex flex-col gap-2">
               <label
                 htmlFor="email"
-                className="font-body text-cream/50 text-xs tracking-widest uppercase"
+                className="font-body text-cream/70 text-xs tracking-widest uppercase font-semibold"
               >
                 Email
               </label>
@@ -82,7 +83,7 @@ export default function ContactSection() {
                 type="email"
                 autoComplete="email"
                 required
-                className="font-body text-cream bg-cream/10 border border-cream/20 rounded-lg px-4 py-3 text-base placeholder:text-cream/30 focus:outline-none focus:ring-2 focus:ring-cream/40 transition"
+                className="font-body font-medium text-cream bg-cream/15 border border-cream/40 rounded-lg px-4 py-3 text-base placeholder:text-cream/50 focus:outline-none focus:ring-2 focus:ring-cream/60 transition w-full"
                 placeholder="your@email.com"
               />
             </div>
@@ -90,7 +91,7 @@ export default function ContactSection() {
             <div className="flex flex-col gap-2">
               <label
                 htmlFor="message"
-                className="font-body text-cream/50 text-xs tracking-widest uppercase"
+                className="font-body text-cream/70 text-xs tracking-widest uppercase font-semibold"
               >
                 Message
               </label>
@@ -99,7 +100,7 @@ export default function ContactSection() {
                 name="message"
                 rows={5}
                 required
-                className="font-body text-cream bg-cream/10 border border-cream/20 rounded-lg px-4 py-3 text-base placeholder:text-cream/30 focus:outline-none focus:ring-2 focus:ring-cream/40 transition resize-none"
+                className="font-body font-medium text-cream bg-cream/15 border border-cream/40 rounded-lg px-4 py-3 text-base placeholder:text-cream/50 focus:outline-none focus:ring-2 focus:ring-cream/60 transition resize-none w-full"
                 placeholder="What's on your mind?"
               />
             </div>

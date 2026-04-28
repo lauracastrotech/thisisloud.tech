@@ -36,7 +36,7 @@ export default function ProcessSection() {
         </div>
 
         <div className="relative overflow-hidden rounded-xl bg-[url('/textures/slate.jpg')] bg-cover bg-center">
-          {/* Slate overlay */}
+          {/* Charcoal overlay */}
           <div className="absolute inset-0 bg-charcoal/75" aria-hidden="true" />
 
           <ol
