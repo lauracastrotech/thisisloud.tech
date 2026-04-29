@@ -54,7 +54,7 @@ export default function HeroSection() {
               </p>
 
               <p className="font-display text-cream text-xl md:text-2xl leading-snug mb-8">
-                I build things that work well and look good.
+                Come make some noise.
               </p>
 
               <p className="font-body text-cream/80 text-lg md:text-xl leading-relaxed mb-2 md:mb-12">
