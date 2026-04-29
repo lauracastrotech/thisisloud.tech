@@ -11,6 +11,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/lauracastrotech/logger-frontend",
     mediaType: "embed",
     mediaSrc: "https://www.loom.com/embed/777618a1e74247388af573732a755ee4",
+    thumbnailSrc: "/thumbnail/logger_thumbnail.jpg",
   },
   {
     id: "food-pulse",

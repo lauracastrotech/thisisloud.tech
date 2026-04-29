@@ -25,4 +25,5 @@ export interface Project {
   githubUrl: string;
   mediaType: "video" | "image" | "embed";
   mediaSrc?: string;
+  thumbnailSrc?: string;
 }

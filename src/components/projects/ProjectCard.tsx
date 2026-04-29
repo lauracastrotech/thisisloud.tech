@@ -23,13 +23,14 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
       <div className="relative z-10 p-8 flex flex-col gap-6">
       {/* Media placeholder */}
       <div className="relative w-full aspect-video bg-forest/30 rounded overflow-hidden border border-cream/10 flex items-center justify-center">
-        {project.mediaType === "embed" ? (
-          <div className="flex flex-col items-center gap-2" aria-hidden="true">
-            <svg className="h-10 w-10 text-cream/30" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z" />
-            </svg>
-            <p className="font-body text-cream/30 text-sm tracking-wide">Video demo</p>
-          </div>
+        {project.mediaType === "embed" && project.thumbnailSrc ? (
+          <Image
+            src={project.thumbnailSrc}
+            alt={`${project.name} thumbnail`}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 576px"
+          />
         ) : project.mediaSrc ? (
           project.mediaType === "video" ? (
             <video
