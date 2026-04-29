@@ -5,7 +5,7 @@ export const projects: Project[] = [
     id: "logger",
     name: "Logger",
     description: "A full-stack accountability tracker built as a capstone project at Ada Developers Academy. Users can track personal or group goals, add accountability partners, and send SMS check-in reminders to friends via Textbelt.",
-    role: "Built the group feature end to end -- list display, button events, forms, API calls to the backend, and Textbelt SMS integration. Styled the full application with Material UI and co-authored the layout, loading logic, and component styles across the app.",
+    role: "Built the group feature end to end, including list display, button events, forms, API calls to the backend, and Textbelt SMS integration. Styled the full application with Material UI and co-authored the layout, loading logic, and component styles across the app.",
     aiUsage: "Used AI to navigate Material UI documentation and for debugging and breaking down problems throughout development.",
     techStack: ["React", "Vite", "Material UI", "React Router", "Java Spring Boot", "PostgreSQL", "Textbelt API"],
     githubUrl: "https://github.com/lauracastrotech/logger-frontend",
