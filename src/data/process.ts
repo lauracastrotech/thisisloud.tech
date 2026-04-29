@@ -9,7 +9,7 @@ export const processSteps: ProcessStep[] = [
   {
     step: 2,
     title: "Project Scope",
-    description: "I define what success looks like — what's in, what's out, and what done actually means.",
+    description: "I define what success looks like: what's in, what's out, and what done actually means.",
   },
   {
     step: 3,
@@ -19,6 +19,6 @@ export const processSteps: ProcessStep[] = [
   {
     step: 4,
     title: "Launch",
-    description: "Ship it. Then watch it, measure it, and improve it. Done is better than perfect — but done well is better than both.",
+    description: "Ship it. Then watch it, measure it, and improve it. Done is better than perfect, but done well is better than both.",
   },
 ];
