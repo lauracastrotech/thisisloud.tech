@@ -24,13 +24,16 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
       {/* Media placeholder */}
       <div className="relative w-full aspect-video bg-forest/30 rounded overflow-hidden border border-cream/10 flex items-center justify-center">
         {project.mediaType === "embed" && project.thumbnailSrc ? (
-          <Image
-            src={project.thumbnailSrc}
-            alt={`${project.name} thumbnail`}
-            fill
-            className="object-cover object-[center_15px]"
-            sizes="(max-width: 768px) 100vw, 576px"
-          />
+          <>
+            <Image
+              src={project.thumbnailSrc}
+              alt={`${project.name} thumbnail`}
+              fill
+              className="object-cover object-top"
+              sizes="(max-width: 768px) 100vw, 576px"
+            />
+            <div className="absolute inset-0 bg-navy/60" aria-hidden="true" />
+          </>
         ) : project.mediaSrc ? (
           project.mediaType === "video" ? (
             <video
