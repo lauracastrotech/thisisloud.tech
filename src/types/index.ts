@@ -23,6 +23,6 @@ export interface Project {
   aiUsage: string;
   techStack: string[];
   githubUrl: string;
-  mediaType: "video" | "image";
+  mediaType: "video" | "image" | "embed";
   mediaSrc?: string;
 }

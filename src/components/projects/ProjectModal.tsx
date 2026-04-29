@@ -37,11 +37,11 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-title"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8"
+      className="fixed inset-x-0 bottom-0 top-[4.25rem] z-50 flex items-center justify-center p-4 md:p-8"
     >
-      {/* Backdrop */}
+      {/* Backdrop — covers full screen including behind navbar */}
       <div
-        className="absolute inset-0 bg-charcoal/90 backdrop-blur-sm"
+        className="fixed inset-0 bg-charcoal/90 backdrop-blur-sm"
         aria-hidden="true"
         onClick={onClose}
       />
@@ -75,7 +75,14 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           {/* Media */}
           <div className="relative w-full aspect-video bg-forest/30 rounded overflow-hidden border border-cream/10 flex items-center justify-center">
             {project.mediaSrc ? (
-              project.mediaType === "video" ? (
+              project.mediaType === "embed" ? (
+                <iframe
+                  src={project.mediaSrc}
+                  className="w-full h-full"
+                  allowFullScreen
+                  title={`${project.name} demo video`}
+                />
+              ) : project.mediaType === "video" ? (
                 <video
                   src={project.mediaSrc}
                   controls
