@@ -28,7 +28,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
             src={project.thumbnailSrc}
             alt={`${project.name} thumbnail`}
             fill
-            className="object-cover object-top"
+            className="object-cover object-[center_15px]"
             sizes="(max-width: 768px) 100vw, 576px"
           />
         ) : project.mediaSrc ? (
