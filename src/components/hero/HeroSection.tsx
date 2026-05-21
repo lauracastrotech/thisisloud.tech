@@ -1,6 +1,11 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 
 export default function HeroSection() {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <section
       id="main-content"
@@ -54,14 +59,43 @@ export default function HeroSection() {
               </p>
 
               <p className="font-display text-cream text-xl md:text-2xl leading-snug mb-8">
-                Come make some noise.
+                Let&apos;s make some noise.
               </p>
 
-              <p className="font-body text-cream/80 text-lg md:text-xl leading-relaxed mb-2 md:mb-12">
-                I came to tech on purpose. 2,000+ hours across community college,
-                bootcamp, Ada Developers Academy, and an AWS apprenticeship. I build
-                full stack applications, communicate clearly, and make products better.
-              </p>
+              <div className="font-body text-cream/80 text-lg md:text-xl leading-relaxed mb-2 md:mb-12">
+                <p className={expanded ? "mb-4" : ""}>
+                  I came to tech on purpose. A communications degree and a winding career full of pivots brought me here. I build full-stack applications, websites, and features, and I start every one of them the same way: by asking who it&apos;s for. Community is deeply embedded in how I move through the world, and that shapes everything I build...{!expanded && (
+                    <button
+                      onClick={() => setExpanded(true)}
+                      className="inline ml-1 font-body text-cream/50 hover:text-cream transition-colors focus:outline-none focus:underline"
+                      aria-expanded={false}
+                    >
+                      read more
+                    </button>
+                  )}
+                </p>
+
+                {expanded && (
+                  <div className="flex flex-col gap-4">
+                    <p>
+                      My background in public relations taught me the most important skill in any room: know your audience. I&apos;ve applied that at every stage of a build. Whether I&apos;m thinking about how to make mental healthcare affordable or pair programming with a peer to debug a nutrient tracker or presenting a demo for an income calculator, I take a human-centered approach to solve problems. I synthesize fast and move to action faster.
+                    </p>
+                    <p>
+                      It&apos;s been the relationships I&apos;ve made and the opportunities people have given me that shaped who I am. DEIA programs opened doors I didn&apos;t know existed. Ada Developers Academy led to an AWS apprenticeship that changed my trajectory. I don&apos;t carry that quietly. Paying it forward looks like organizing a Zumba-thon to raise funds for a local small business. My cohort at Ada nominated me to be the student speaker at graduation, an honor that affirmed my peers recognized the efforts I made to create an inclusive, constructive, and collaborative environment.
+                    </p>
+                    <p>
+                      My life outside of work matters just as much to me. My family and community are at the center of everything. We are a pickleball family through and through. We don&apos;t always see eye to eye, but the court is a neutral space where we have fun and stay healthy. I love to travel, to see new landscapes and learn about other cultures and ways of living. As an adult I&apos;ve been able to pursue a childhood dream of being a dancer. I&apos;m Puerto Rican by heritage and deeply proud of it, which is why I chose Salsa. Finding balance is a work in progress, but I&apos;ve given myself grace to be present and patient while my life unfolds.{" "}
+                      <button
+                        onClick={() => setExpanded(false)}
+                        className="inline font-body text-cream/50 hover:text-cream transition-colors focus:outline-none focus:underline"
+                        aria-expanded={true}
+                      >
+                        read less
+                      </button>
+                    </p>
+                  </div>
+                )}
+              </div>
 
               {/* View My Work — desktop only, mobile version lives below photo */}
               <div className="hidden md:flex items-center gap-8 flex-wrap">
