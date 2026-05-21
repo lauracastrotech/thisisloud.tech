@@ -19,6 +19,6 @@ export const processSteps: ProcessStep[] = [
   {
     step: 4,
     title: "Launch",
-    description: "Ship it. Then watch it, measure it, and improve it. Done is better than perfect, but done well is better than both.",
+    description: "You're live! We've made your mark online. We close out the project with documentation so you can maintain your site with confidence.",
   },
 ];
