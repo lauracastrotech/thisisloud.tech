@@ -21,14 +21,15 @@ export default function ContactForm() {
     }
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify({
-          name: data.get("name"),
-          email: data.get("email"),
-          message: data.get("message"),
-          botcheck: data.get("botcheck"),
+          access_key: "bfe59d8f-44d5-44dd-80b9-490b91a4d280",
+          subject: "New message from thisisloud.tech",
+          name: (data.get("name") as string).trim(),
+          email: (data.get("email") as string).trim(),
+          message: (data.get("message") as string).trim(),
         }),
       });
 

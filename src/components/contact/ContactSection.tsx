@@ -54,9 +54,6 @@ export default function ContactSection() {
         </div>
       </div>
 
-      <p className="relative z-10 text-center font-body text-cream/30 text-xs tracking-wide pt-12 pb-2">
-        Built by Laura Castro
-      </p>
     </section>
   );
 }

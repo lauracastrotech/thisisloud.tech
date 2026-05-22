@@ -14,7 +14,7 @@ export const processSteps: ProcessStep[] = [
   {
     step: 3,
     title: "Design Review",
-    description: "Before writing code, I mockup views of the proposed design and gather your feedback iteratively. This is where I check that the design is accessible, responsive, and technically feasible.",
+    description: "Before writing code, I mockup views of the proposed design and gather your feedback iteratively.",
   },
   {
     step: 4,
