@@ -34,24 +34,22 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
             />
             <div className="absolute inset-0 bg-navy/60" aria-hidden="true" />
           </>
-        ) : project.mediaSrc ? (
-          project.mediaType === "video" ? (
-            <video
-              src={project.mediaSrc}
-              className="w-full h-full object-cover"
-              muted
-              playsInline
-              aria-label={`${project.name} demo video`}
-            />
-          ) : (
-            <Image
-              src={project.mediaSrc}
-              alt={`${project.name} screenshot`}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 576px"
-            />
-          )
+        ) : project.mediaType === "video" && project.mediaSrc ? (
+          <video
+            src={project.mediaSrc}
+            className="w-full h-full object-cover"
+            muted
+            playsInline
+            aria-label={`${project.name} demo video`}
+          />
+        ) : project.mediaType === "image" && project.mediaSrc ? (
+          <Image
+            src={project.mediaSrc}
+            alt={`${project.name} screenshot`}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 576px"
+          />
         ) : (
           <p className="font-body text-cream/30 text-sm tracking-wide">
             {project.mediaType === "video" ? "Video coming soon" : "Screenshot coming soon"}
