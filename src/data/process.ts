@@ -4,17 +4,17 @@ export const processSteps: ProcessStep[] = [
   {
     step: 1,
     title: "Discovery",
-    description: "I start by listening. Understanding the problem, the users, and the constraints before anything gets built.",
+    description: "I start by listening. I will conduct a needs assessment with you where we dive into the problem and your ideal user.",
   },
   {
     step: 2,
     title: "Project Scope",
-    description: "I define what success looks like: what's in, what's out, and what done actually means.",
+    description: "We define what success looks like together. This is your opportunity to share your vision and create a wish list.",
   },
   {
     step: 3,
     title: "Design Review",
-    description: "Before writing code, I review the design for accessibility, responsiveness, and technical feasibility.",
+    description: "Before writing code, I mockup views of the proposed design and gather your feedback iteratively. This is where I check that the design is accessible, responsive, and technically feasible.",
   },
   {
     step: 4,
