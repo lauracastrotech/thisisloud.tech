@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 import type { Project } from "@/types";
 
@@ -32,7 +33,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
     return () => { document.body.style.overflow = ""; };
   }, []);
 
-  return (
+  return createPortal(
     <div
       role="dialog"
       aria-modal="true"
@@ -167,6 +168,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           </a>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
