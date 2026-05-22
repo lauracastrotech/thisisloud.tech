@@ -15,6 +15,11 @@ export interface ProcessStep {
   description: string;
 }
 
+export interface Service {
+  name: string;
+  projects: string[];
+}
+
 export interface Project {
   id: string;
   name: string;
