@@ -1,6 +1,7 @@
 import Image from "next/image";
 import SocialLinks from "@/components/ui/SocialLinks";
 import { socialLinks } from "@/data/social";
+import ContactForm from "./ContactForm";
 
 export default function ContactSection() {
   return (
@@ -48,85 +49,14 @@ export default function ContactSection() {
           </div>
 
           {/* Contact form */}
-          <form
-            className="flex-1 w-full flex flex-col gap-6"
-            aria-label="Contact form"
-          >
-            <div className="flex flex-col gap-2">
-              <label
-                htmlFor="name"
-                className="font-body text-cream/70 text-xs tracking-widest uppercase font-semibold"
-              >
-                Name
-              </label>
-              <input
-                id="name"
-                name="name"
-                type="text"
-                autoComplete="name"
-                required
-                aria-describedby="name-hint"
-                className="font-body font-medium text-cream bg-cream/40 border border-cream/80 rounded-lg px-4 py-3 text-base placeholder:text-cream/50 focus:outline-none focus:ring-2 focus:ring-cream/60 transition w-full"
-                placeholder="Your name"
-              />
-              <p id="name-hint" className="font-body text-cream/40 text-xs tracking-wide">
-                Enter your first and last name.
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label
-                htmlFor="email"
-                className="font-body text-cream/70 text-xs tracking-widest uppercase font-semibold"
-              >
-                Email
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                autoComplete="email"
-                required
-                aria-describedby="email-hint"
-                className="font-body font-medium text-cream bg-cream/40 border border-cream/80 rounded-lg px-4 py-3 text-base placeholder:text-cream/50 focus:outline-none focus:ring-2 focus:ring-cream/60 transition w-full"
-                placeholder="your@email.com"
-              />
-              <p id="email-hint" className="font-body text-cream/40 text-xs tracking-wide">
-                Your email address so I can get back to you.
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <label
-                htmlFor="message"
-                className="font-body text-cream/70 text-xs tracking-widest uppercase font-semibold"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows={5}
-                required
-                aria-describedby="message-hint"
-                className="font-body font-medium text-cream bg-cream/40 border border-cream/80 rounded-lg px-4 py-3 text-base placeholder:text-cream/50 focus:outline-none focus:ring-2 focus:ring-cream/60 transition resize-none w-full"
-                placeholder="What's on your mind?"
-              />
-              <p id="message-hint" className="font-body text-cream/40 text-xs tracking-wide">
-                Tell me about your project or what you would like to work on together.
-              </p>
-            </div>
-
-            <button
-              type="submit"
-              className="font-body text-sm tracking-widest uppercase bg-forest text-cream px-8 py-4 rounded-lg hover:bg-forest/80 transition-colors focus:outline-none focus:ring-2 focus:ring-cream/40 self-start"
-            >
-              Send Message
-            </button>
-          </form>
+          <ContactForm />
 
         </div>
       </div>
+
+      <p className="relative z-10 text-center font-body text-cream/30 text-xs tracking-wide pt-12 pb-2">
+        Built by Laura Castro
+      </p>
     </section>
   );
 }
