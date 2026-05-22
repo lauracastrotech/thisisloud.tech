@@ -65,9 +65,13 @@ export default function ContactSection() {
                 type="text"
                 autoComplete="name"
                 required
-                className="font-body font-medium text-cream bg-cream/15 border border-cream/40 rounded-lg px-4 py-3 text-base placeholder:text-cream/50 focus:outline-none focus:ring-2 focus:ring-cream/60 transition w-full"
+                aria-describedby="name-hint"
+                className="font-body font-medium text-cream bg-cream/40 border border-cream/80 rounded-lg px-4 py-3 text-base placeholder:text-cream/50 focus:outline-none focus:ring-2 focus:ring-cream/60 transition w-full"
                 placeholder="Your name"
               />
+              <p id="name-hint" className="font-body text-cream/40 text-xs tracking-wide">
+                Enter your first and last name.
+              </p>
             </div>
 
             <div className="flex flex-col gap-2">
@@ -83,9 +87,13 @@ export default function ContactSection() {
                 type="email"
                 autoComplete="email"
                 required
-                className="font-body font-medium text-cream bg-cream/15 border border-cream/40 rounded-lg px-4 py-3 text-base placeholder:text-cream/50 focus:outline-none focus:ring-2 focus:ring-cream/60 transition w-full"
+                aria-describedby="email-hint"
+                className="font-body font-medium text-cream bg-cream/40 border border-cream/80 rounded-lg px-4 py-3 text-base placeholder:text-cream/50 focus:outline-none focus:ring-2 focus:ring-cream/60 transition w-full"
                 placeholder="your@email.com"
               />
+              <p id="email-hint" className="font-body text-cream/40 text-xs tracking-wide">
+                Your email address so I can get back to you.
+              </p>
             </div>
 
             <div className="flex flex-col gap-2">
@@ -100,9 +108,13 @@ export default function ContactSection() {
                 name="message"
                 rows={5}
                 required
-                className="font-body font-medium text-cream bg-cream/15 border border-cream/40 rounded-lg px-4 py-3 text-base placeholder:text-cream/50 focus:outline-none focus:ring-2 focus:ring-cream/60 transition resize-none w-full"
+                aria-describedby="message-hint"
+                className="font-body font-medium text-cream bg-cream/40 border border-cream/80 rounded-lg px-4 py-3 text-base placeholder:text-cream/50 focus:outline-none focus:ring-2 focus:ring-cream/60 transition resize-none w-full"
                 placeholder="What's on your mind?"
               />
+              <p id="message-hint" className="font-body text-cream/40 text-xs tracking-wide">
+                Tell me about your project or what you would like to work on together.
+              </p>
             </div>
 
             <button
