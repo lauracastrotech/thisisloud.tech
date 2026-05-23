@@ -13,6 +13,19 @@ export default function ContactSection() {
       {/* Charcoal overlay */}
       <div className="absolute inset-0 bg-charcoal/85" aria-hidden="true" />
 
+      {/* Brand credit — bottom left */}
+      <p className="absolute bottom-4 left-6 z-10 font-body text-cream/30 text-xs tracking-wide">
+        Brand designed by{" "}
+        <a
+          href="https://www.hausoftere.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-cream/60 transition-colors underline underline-offset-2"
+        >
+          Haus of Tere
+        </a>
+      </p>
+
       <div className="relative z-10 mx-auto max-w-5xl px-6">
         <div className="mb-8 text-center md:text-left">
           <p className="font-body text-cream/50 text-xs tracking-widest uppercase mb-3">

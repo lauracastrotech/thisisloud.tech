@@ -22,8 +22,10 @@ export default function ProcessSection() {
     <section
       id="process"
       aria-label="My process"
-      className="relative py-24 md:py-32 overflow-hidden bg-forest"
+      className="relative py-24 md:py-32 overflow-hidden bg-[url('/textures/slate.jpg')] bg-cover bg-center bg-no-repeat bg-scroll md:bg-fixed"
     >
+      {/* Forest overlay */}
+      <div className="absolute inset-0 bg-forest/80" aria-hidden="true" />
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-5xl px-6">
         <div className="mb-16">

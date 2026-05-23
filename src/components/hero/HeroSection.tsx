@@ -58,6 +58,19 @@ export default function HeroSection() {
                 Let&apos;s make some noise.
               </p>
 
+              {/* Circle photo — mobile only, below tagline */}
+              <div className="md:hidden flex justify-center mb-8">
+                <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-cream/30">
+                  <Image
+                    src="/headshot/arm_crossed.jpeg"
+                    alt="Laura Castro"
+                    fill
+                    sizes="192px"
+                    className="object-cover object-top [filter:saturate(80%)_hue-rotate(-15deg)]"
+                  />
+                </div>
+              </div>
+
               <div className="font-body text-cream/80 text-lg md:text-xl leading-relaxed mb-2 md:mb-12">
                 <p className={expanded ? "mb-4" : ""}>
                   I came to tech on purpose. A communications degree and a winding career full of pivots brought me here. I build full-stack applications and websites, and I start every project with understanding the end user. Community is deeply embedded in how I move through the world, and that shapes everything I build...{!expanded && (
@@ -104,23 +117,14 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* View My Work + Photo — mobile only */}
-            <div className="md:hidden flex flex-col items-center gap-4 pb-8">
+            {/* View My Work — mobile only */}
+            <div className="md:hidden flex justify-center pb-8">
               <a
                 href="#projects"
                 className="font-body text-base font-semibold text-cream hover:text-cream/80 tracking-widest uppercase transition-colors animate-bounce"
               >
                 View My Work &darr;
               </a>
-              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-cream/30">
-                <Image
-                  src="/headshot/arm_crossed.jpeg"
-                  alt="Laura Castro"
-                  fill
-                  sizes="192px"
-                  className="object-cover object-top [filter:saturate(80%)_hue-rotate(-15deg)]"
-                />
-              </div>
             </div>
 
           </div>

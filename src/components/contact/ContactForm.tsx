@@ -84,10 +84,10 @@ export default function ContactForm() {
           autoComplete="name"
           required
           aria-describedby="name-hint"
-          className="font-body font-medium text-cream bg-cream/40 border border-cream/80 rounded-lg px-4 py-3 text-base placeholder:text-cream/50 focus:outline-none focus:ring-2 focus:ring-cream/60 transition w-full"
+          className="font-body font-medium text-charcoal bg-cream border border-cream/20 rounded-lg px-4 py-3 text-base placeholder:text-charcoal/40 focus:outline-none focus:ring-2 focus:ring-cream/60 transition w-full"
           placeholder="Your name"
         />
-        <p id="name-hint" className="font-body text-cream/40 text-xs tracking-wide">
+        <p id="name-hint" className="font-body text-cream/40 text-sm tracking-wide">
           Enter your first and last name.
         </p>
       </div>
@@ -106,10 +106,10 @@ export default function ContactForm() {
           autoComplete="email"
           required
           aria-describedby="email-hint"
-          className="font-body font-medium text-cream bg-cream/40 border border-cream/80 rounded-lg px-4 py-3 text-base placeholder:text-cream/50 focus:outline-none focus:ring-2 focus:ring-cream/60 transition w-full"
+          className="font-body font-medium text-charcoal bg-cream border border-cream/20 rounded-lg px-4 py-3 text-base placeholder:text-charcoal/40 focus:outline-none focus:ring-2 focus:ring-cream/60 transition w-full"
           placeholder="your@email.com"
         />
-        <p id="email-hint" className="font-body text-cream/40 text-xs tracking-wide">
+        <p id="email-hint" className="font-body text-cream/40 text-sm tracking-wide">
           Your email address so I can get back to you.
         </p>
       </div>
@@ -127,10 +127,10 @@ export default function ContactForm() {
           rows={5}
           required
           aria-describedby="message-hint"
-          className="font-body font-medium text-cream bg-cream/40 border border-cream/80 rounded-lg px-4 py-3 text-base placeholder:text-cream/50 focus:outline-none focus:ring-2 focus:ring-cream/60 transition resize-none w-full"
+          className="font-body font-medium text-charcoal bg-cream border border-cream/20 rounded-lg px-4 py-3 text-base placeholder:text-charcoal/40 focus:outline-none focus:ring-2 focus:ring-cream/60 transition resize-none w-full"
           placeholder="What's on your mind?"
         />
-        <p id="message-hint" className="font-body text-cream/40 text-xs tracking-wide">
+        <p id="message-hint" className="font-body text-cream/40 text-sm tracking-wide">
           Tell me about your project or what you would like to work on together.
         </p>
       </div>
