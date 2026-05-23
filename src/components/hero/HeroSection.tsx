@@ -12,6 +12,8 @@ export default function HeroSection() {
       aria-label="Introduction"
       className="relative min-h-screen flex items-center overflow-hidden bg-[url('/textures/sand.jpg')] bg-cover bg-center bg-no-repeat"
     >
+      {/* Forest overlay over sand */}
+      <div className="absolute inset-0 bg-charcoal/85" aria-hidden="true" />
       {/* Hero content — single card */}
       <div className="relative z-10 mx-auto max-w-5xl w-full px-6 py-32 md:py-40">
         <div className="relative rounded-2xl overflow-hidden animate-fade-in bg-navy">
@@ -76,7 +78,7 @@ export default function HeroSection() {
                   I came to tech on purpose. A communications degree and a winding career full of pivots brought me here. I build full-stack applications and websites, and I start every project with understanding the end user. Community is deeply embedded in how I move through the world, and that shapes everything I build...{!expanded && (
                     <button
                       onClick={() => setExpanded(true)}
-                      className="inline ml-1 font-body text-cream/50 hover:text-cream transition-colors focus:outline-none focus:underline"
+                      className="inline ml-1 font-body font-bold text-olive hover:text-olive/80 transition-colors focus:outline-none focus:underline"
                       aria-expanded={false}
                     >
                       read more
@@ -96,7 +98,7 @@ export default function HeroSection() {
                       My life outside of work matters just as much to me. My family and community are at the center of everything. We are a pickleball family through and through. We don&apos;t always see eye to eye, but the court is a neutral space where we have fun and stay healthy. I love to travel, to see new landscapes and learn about other cultures and ways of living. As an adult I&apos;ve been able to pursue a childhood dream of being a dancer. I&apos;m Puerto Rican by heritage and deeply proud of it, which is why I chose Salsa. Finding balance is a work in progress, but I&apos;ve given myself grace to be present and patient while my life unfolds.{" "}
                       <button
                         onClick={() => setExpanded(false)}
-                        className="inline font-body text-cream/50 hover:text-cream transition-colors focus:outline-none focus:underline"
+                        className="inline font-body font-bold text-olive hover:text-olive/80 transition-colors focus:outline-none focus:underline"
                         aria-expanded={true}
                       >
                         read less
