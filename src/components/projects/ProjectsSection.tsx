@@ -6,11 +6,11 @@ export default function ProjectsSection() {
     <section
       id="projects"
       aria-label="Projects"
-      className="relative py-24 md:py-32 bg-charcoal overflow-hidden bg-[url('/textures/binaryCode_blue.jpg')] bg-cover bg-center bg-no-repeat bg-scroll md:bg-fixed"
+      className="relative py-24 md:py-32 overflow-hidden bg-[url('/textures/sand.jpg')] bg-cover bg-center bg-no-repeat bg-scroll md:bg-fixed"
     >
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-charcoal/85" aria-hidden="true" />
+      {/* Navy overlay */}
+      <div className="absolute inset-0 bg-navy/80" aria-hidden="true" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-5xl px-6">
