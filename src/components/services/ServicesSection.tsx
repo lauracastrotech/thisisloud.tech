@@ -66,6 +66,9 @@ export default function ServicesSection() {
           <h2 className="font-display text-cream text-4xl md:text-5xl tracking-wide drop-shadow-md">
             Services
           </h2>
+          <p className="font-body text-cream/40 text-sm tracking-wide mt-3">
+            Tap a card to learn more
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
@@ -73,10 +76,6 @@ export default function ServicesSection() {
             <ServiceCard key={service.name} service={service} />
           ))}
         </div>
-
-        <p className="font-body text-cream/40 text-sm tracking-wide mt-8 text-center">
-          Tap a card to learn more
-        </p>
       </div>
     </section>
   );
