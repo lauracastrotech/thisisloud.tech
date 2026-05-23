@@ -14,13 +14,10 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
       aria-label={`View details for ${project.name}`}
       onClick={() => onSelect(project)}
       onKeyDown={(e) => e.key === "Enter" && onSelect(project)}
-      className="relative cursor-pointer border border-cream/10 rounded-lg overflow-hidden bg-[url('/textures/sand.jpg')] bg-cover bg-center hover:border-cream/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cream/40 select-none"
+      className="cursor-pointer border border-cream/10 rounded-lg overflow-hidden bg-charcoal hover:border-cream/30 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cream/40 select-none"
     >
-      {/* Sand texture overlay */}
-      <div className="absolute inset-0 bg-charcoal/80" aria-hidden="true" />
-
       {/* Card content */}
-      <div className="relative z-10 p-8 flex flex-col gap-6">
+      <div className="p-8 flex flex-col gap-6">
       {/* Media placeholder */}
       <div className="relative w-full aspect-video bg-forest/30 rounded overflow-hidden border border-cream/10 flex items-center justify-center">
         {project.mediaType === "embed" && project.thumbnailSrc ? (

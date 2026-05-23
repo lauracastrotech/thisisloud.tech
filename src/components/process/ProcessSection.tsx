@@ -22,7 +22,7 @@ export default function ProcessSection() {
     <section
       id="process"
       aria-label="My process"
-      className="relative py-24 md:py-32 overflow-hidden bg-[url('/textures/slate.jpg')] bg-cover bg-center bg-no-repeat bg-scroll md:bg-fixed"
+      className="relative py-24 md:py-32 overflow-hidden bg-forest"
     >
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-5xl px-6">
@@ -35,14 +35,11 @@ export default function ProcessSection() {
           </h2>
         </div>
 
-        <div className="relative overflow-hidden rounded-xl bg-[url('/textures/slate.jpg')] bg-cover bg-center">
-          {/* Charcoal overlay */}
-          <div className="absolute inset-0 bg-charcoal/75" aria-hidden="true" />
-
+        <div className="rounded-xl bg-charcoal">
           <ol
             role="list"
             aria-label="Development process steps"
-            className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 p-8 md:p-12"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 p-8 md:p-12"
           >
             {processSteps.map((step) => (
               <li key={step.step}>

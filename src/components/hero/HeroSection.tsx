@@ -14,11 +14,7 @@ export default function HeroSection() {
     >
       {/* Hero content — single card */}
       <div className="relative z-10 mx-auto max-w-5xl w-full px-6 py-32 md:py-40">
-        <div className="relative rounded-2xl overflow-hidden animate-fade-in">
-          {/* Binary code background */}
-          <div className="absolute inset-0 bg-[url('/textures/binaryCode_blue.jpg')] bg-cover bg-center" aria-hidden="true" />
-          {/* Navy overlay */}
-          <div className="absolute inset-0 bg-navy/75" aria-hidden="true" />
+        <div className="relative rounded-2xl overflow-hidden animate-fade-in bg-navy">
 
           {/* Card content */}
           <div className="relative z-10 min-h-[520px]">
