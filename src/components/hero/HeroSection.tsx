@@ -75,7 +75,7 @@ export default function HeroSection() {
 
               <div className="font-body text-cream/80 text-lg md:text-xl leading-relaxed mb-2 md:mb-12">
                 <p className={expanded ? "mb-4" : ""}>
-                  I came to tech on purpose. A communications degree and a winding career full of pivots brought me here. I build full-stack applications and websites, and I start every project with understanding the end user. Community is deeply embedded in how I move through the world, and that shapes everything I build...{!expanded && (
+                  I am a disruptive developer and I came to tech on purpose. My background in communications gave me the foundation I bring to every project: understand the person with the problem before you write a single line of code. I build full-stack applications in the spaces I care most about, including women&apos;s health, nutrition, mental health, and human connection. The projects I&apos;m most proud of all start with a real person, a real problem, and a question I can&apos;t stop thinking about...{!expanded && (
                     <button
                       onClick={() => setExpanded(true)}
                       className="inline ml-1 font-body font-bold text-olive hover:text-olive/80 transition-colors focus:outline-none focus:underline"
@@ -89,13 +89,7 @@ export default function HeroSection() {
                 {expanded && (
                   <div className="flex flex-col gap-4">
                     <p>
-                      My background in public relations taught me the most important skill in any room: know your audience. I&apos;ve applied that at every stage of a build. Whether I&apos;m thinking about how to make mental healthcare affordable or pair programming with a peer to debug a nutrient tracker or presenting a demo for an income calculator, I take a human-centered approach to solve problems. I synthesize fast and move to action faster.
-                    </p>
-                    <p>
-                      It&apos;s been the relationships I&apos;ve made and the opportunities people have given me that shaped who I am. DEIA (Diversity, Equity, Inclusion, and Accessibility) programs opened doors I didn&apos;t know existed. Ada Developers Academy led to an AWS apprenticeship that changed my trajectory. Paying it forward looks like organizing a Zumba-thon to raise funds for a local small business. My cohort at Ada nominated me to be the student speaker at graduation, an honor that affirmed my peers recognized the efforts I made to create a collaborative environment.
-                    </p>
-                    <p>
-                      My life outside of work matters just as much to me. My family and community are at the center of everything. We are a pickleball family through and through. We don&apos;t always see eye to eye, but the court is a neutral space where we have fun and stay healthy. I love to travel, to see new landscapes and learn about other cultures and ways of living. As an adult I&apos;ve been able to pursue a childhood dream of being a dancer. I&apos;m Puerto Rican by heritage and deeply proud of it, which is why I chose Salsa. Finding balance is a work in progress, but I&apos;ve given myself grace to be present and patient while my life unfolds.{" "}
+                      A close friend&apos;s newborn was diagnosed with anemia at a routine checkup. Her vegan diet had created a gap in iron absorption that nobody caught until that appointment. I couldn&apos;t let it go. I started researching iron-rich foods and learned that certain food combinations significantly improve how the body absorbs nutrients. At the time I was deep in a bootcamp learning React, so I asked a classmate if she wanted to build a nutrient tracker alongside our coursework to reinforce what we were learning. We wrote user stories together, found an API with real ingredient data, and designed the app for people managing medical conditions through diet. I owned product development and led user testing. That project is still one of my favorites because it shows exactly how I work. I find a real problem in an area I care about, bring the right people in, and build something that actually helps. If you&apos;re working on something in health, wellness, relationships, or travel, I want to hear about it.{" "}
                       <button
                         onClick={() => setExpanded(false)}
                         className="inline font-body font-bold text-olive hover:text-olive/80 transition-colors focus:outline-none focus:underline"
