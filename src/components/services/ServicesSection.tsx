@@ -77,6 +77,9 @@ export default function ServicesSection() {
           ))}
         </div>
       </div>
+      <p className="absolute bottom-3 right-4 z-10 font-body text-cream/30 text-[15px] tracking-wide">
+        Built with ♥ by Laura Castro
+      </p>
     </section>
   );
 }

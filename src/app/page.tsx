@@ -16,9 +16,6 @@ export default function Home() {
       <footer>
         <ContactSection />
       </footer>
-      <p className="fixed bottom-3 right-4 z-40 font-body text-cream/30 text-[15px] tracking-wide">
-        Built with ♥ by Laura Castro
-      </p>
-    </>
+</>
   );
 }
